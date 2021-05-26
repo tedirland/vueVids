@@ -8,7 +8,7 @@
 <script>
 import axios from 'axios'
 import SearchBar from './components/SearchBar';
-import YOUTUBE_API_KEY from '../config'
+import {YOUTUBE_API_KEY} from '../config'
 
 export default {
   name: 'App',
@@ -17,7 +17,7 @@ export default {
   },
   methods:{
     onTermChange(searchTerm) {
-      axios.get('https://googleapis.com/youtube/v3/search', {
+      axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
           key: YOUTUBE_API_KEY,
           type: 'video',
@@ -27,6 +27,8 @@ export default {
       }).then(response => console.log(response))
 
 
+// console.log(YOUTUBE_API_KEY)
+// console.log(searchTerm)
   }
 
 }
