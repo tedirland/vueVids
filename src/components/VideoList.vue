@@ -1,12 +1,20 @@
 <template>
 
 <ul>
-  VideoList</ul>
+  VideoList
+ <VideoListItem> </VideoListItem>
+  </ul>
 </template>
 
 <script>
+import VideoListItem from './VideoListItem'
 export default {
-  name: 'VideoList'
+  name: 'VideoList',
+  components: {
+    VideoListItem
+  },
+  props: ['videos']
+
 
 }
 </script>
