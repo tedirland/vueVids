@@ -7,6 +7,7 @@
 
 <script>
 import SearchBar from './components/SearchBar';
+import YOUTUBE_API_KEY from '../config'
 
 export default {
   name: 'App',
